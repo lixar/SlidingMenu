@@ -24,6 +24,7 @@
 
         <android-maven.version>3.1.1</android-maven.version>
         <actionbarsherlock.version>4.1.0</actionbarsherlock.version>
+        <roboguice.version>2.0</roboguice.version>
     </properties>
 
     <modules>
@@ -49,6 +50,11 @@
                 <groupId>com.google.android</groupId>
                 <artifactId>support-v4</artifactId>
                 <version>${android-support.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.roboguice</groupId>
+                <artifactId>roboguice</artifactId>
+                <version>${roboguice.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.actionbarsherlock</groupId>

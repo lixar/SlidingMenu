@@ -28,13 +28,17 @@
             <artifactId>support-v4</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.roboguice</groupId>
+            <artifactId>roboguice</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.actionbarsherlock</groupId>
             <artifactId>library</artifactId>
             <type>apklib</type>
         </dependency>
         <dependency>
             <groupId>com.slidingmenu</groupId>
-            <artifactId>library-abs-support</artifactId>
+            <artifactId>library-sherlock-support</artifactId>
             <type>apklib</type>
             <version>1.0</version>
         </dependency>
