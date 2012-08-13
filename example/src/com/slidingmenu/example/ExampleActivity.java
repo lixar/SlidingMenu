@@ -1,24 +1,19 @@
 package com.slidingmenu.example;
 
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
+import com.slidingmenu.lib.app.SlidingFragmentActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import android.annotation.TargetApi;
-import android.app.ActionBar;
-import android.app.ActionBar.Tab;
-import android.app.ActionBar.TabListener;
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
-import android.os.Bundle;
-import android.support.v13.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.view.Menu;
-import android.view.MenuItem;
-
-import com.slidingmenu.lib.app.SlidingFragmentActivity;
-
-@TargetApi(11)
 public class ExampleActivity extends SlidingFragmentActivity {
 
 	public void onCreate(Bundle savedInstanceState) {
@@ -26,15 +21,15 @@ public class ExampleActivity extends SlidingFragmentActivity {
 		// set the Above View
 		setContentView(R.layout.pager);
 		ViewPager vp = (ViewPager) findViewById(R.id.pager);
-		PagerAdapter adapter = new PagerAdapter(getFragmentManager(), 
-				vp, getActionBar());
+		PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager(),
+				vp, getSupportActionBar());
 		for (int i = 0; i < 3; i++) {
 			adapter.addTab(new SampleListFragment());
 		}
 		
 		// set the Behind View
 		setBehindContentView(R.layout.frame);
-		FragmentTransaction t = this.getFragmentManager().beginTransaction();
+		FragmentTransaction t = this.getSupportFragmentManager().beginTransaction();
 		t.replace(R.id.frame, new SampleListFragment());
 		t.commit();
 
@@ -46,14 +41,14 @@ public class ExampleActivity extends SlidingFragmentActivity {
 		getSlidingMenu().setBehindScrollScale(0.25f);
 
 		// customize the ActionBar
-		ActionBar actionBar = getActionBar();
+		ActionBar actionBar = getSupportActionBar();
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		actionBar.setDisplayHomeAsUpEnabled(true);
 	}
 	
 	
-	public class PagerAdapter extends FragmentPagerAdapter implements 
-	ViewPager.OnPageChangeListener, TabListener{
+	public class PagerAdapter extends FragmentPagerAdapter implements
+	ViewPager.OnPageChangeListener, ActionBar.TabListener {
 
 		private List<Fragment> mFragments = new ArrayList<Fragment>();
 		private ViewPager mPager;
@@ -84,12 +79,12 @@ public class ExampleActivity extends SlidingFragmentActivity {
 		}
 
 		@Override
-		public void onTabSelected(Tab tab, FragmentTransaction ft) {
+		public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
 			mPager.setCurrentItem(tab.getPosition());
 		}
 
-		public void onTabUnselected(Tab tab, FragmentTransaction ft) { }
-		public void onTabReselected(Tab tab, FragmentTransaction ft) { }
+		public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction ft) { }
+		public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) { }
 		public void onPageScrollStateChanged(int arg0) { }
 		public void onPageScrolled(int arg0, float arg1, int arg2) { }
 
@@ -110,7 +105,7 @@ public class ExampleActivity extends SlidingFragmentActivity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		this.getMenuInflater().inflate(R.menu.main, menu);
+		this.getSupportMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
