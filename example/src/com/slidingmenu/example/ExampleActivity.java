@@ -9,17 +9,18 @@ import android.support.v4.view.ViewPager;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
-import com.slidingmenu.lib.app.SlidingFragmentActivity;
+import roboguice.inject.ContentView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ExampleActivity extends SlidingFragmentActivity {
+@ContentView(R.layout.pager)
+public class ExampleActivity extends RoboSherlockSlidingFragmentActivity {
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		// set the Above View
-		setContentView(R.layout.pager);
+		//setContentView(R.layout.pager);
 		ViewPager vp = (ViewPager) findViewById(R.id.pager);
 		PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager(),
 				vp, getSupportActionBar());
