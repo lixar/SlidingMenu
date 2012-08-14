@@ -65,8 +65,7 @@ public class ExampleActivity extends RoboSherlockSlidingFragmentActivity {
 		
 		public void addTab(Fragment frag) {
 			mFragments.add(frag);
-			mActionBar.addTab(mActionBar.newTab().setTabListener(this).
-					setText("Tab "+mFragments.size()));
+			mActionBar.addTab(mActionBar.newTab().setTabListener(this).setText("Tab "+mFragments.size()));
 		}
 		
 		@Override
