@@ -322,7 +322,7 @@ public class SlidingMenu extends RelativeLayout {
 			throw new IllegalStateException("TouchMode must be set to either" +
 					"TOUCHMODE_FULLSCREEN or TOUCHMODE_MARGIN or TOUCHMODE_NONE.");
 		}
-		mViewBehind.setTouchMode(i);
+		mViewBehind.setTouchModeBehind(i);
 	}
 
 	public void setShadowDrawable(int resId) {
