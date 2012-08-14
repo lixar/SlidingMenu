@@ -10,6 +10,20 @@
     <name>Sliding Menu</name>
     <packaging>pom</packaging>
 
+    <distributionManagement>
+        <repository>
+            <id>lixar-maven-repository</id>
+            <url>http://nexus.lixar.net/content/repositories/lixar-maven-repository/</url>
+        </repository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>lixar-maven-repository</id>
+            <url>http://nexus.lixar.net/content/repositories/lixar-maven-repository/</url>
+        </repository>
+    </repositories>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8
