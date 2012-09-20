@@ -1,20 +1,14 @@
 package com.slidingmenu.example;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.app.ListFragment;
+import android.support.v4.app.*;
 import android.support.v4.view.ViewPager;
-import android.view.MenuItem;
-
 import com.slidingmenu.lib.SlidingMenu;
 import com.slidingmenu.lib.app.SlidingFragmentActivity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class BaseActivity extends SlidingFragmentActivity {
 
@@ -50,15 +44,15 @@ public class BaseActivity extends SlidingFragmentActivity {
 		}
 	}
 	
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
-		case android.R.id.home:
-			toggle();
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
+//	@Override
+//	public boolean onOptionsItemSelected(MenuItem item) {
+//		switch (item.getItemId()) {
+//		case android.R.id.home:
+//			toggle();
+//			return true;
+//		}
+//		return super.onOptionsItemSelected(item);
+//	}
 	
 	public class PagerAdapter extends FragmentPagerAdapter {
 		private List<Fragment> mFragments = new ArrayList<Fragment>();

@@ -1,8 +1,6 @@
 package com.slidingmenu.example;
 
 import android.os.Bundle;
-import android.view.Menu;
-
 import com.slidingmenu.lib.SlidingMenu;
 import com.slidingmenu.lib.SlidingMenu.CanvasTransformer;
 
@@ -31,10 +29,10 @@ public abstract class CustomAnimation extends BaseActivity {
 		sm.setBehindCanvasTransformer(mTransformer);
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		this.getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
+//	@Override
+//	public boolean onCreateOptionsMenu(Menu menu) {
+//		this.getMenuInflater().inflate(R.menu.main, menu);
+//		return true;
+//	}
 
 }
