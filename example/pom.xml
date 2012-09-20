@@ -40,7 +40,7 @@
             <groupId>com.slidingmenu</groupId>
             <artifactId>library-sherlock-support</artifactId>
             <type>apklib</type>
-            <version>1.0</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 
