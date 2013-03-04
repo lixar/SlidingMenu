@@ -6,7 +6,7 @@
 
     <groupId>com.slidingmenu</groupId>
     <artifactId>parent</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
     <name>Sliding Menu</name>
     <packaging>pom</packaging>
 
@@ -26,19 +26,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8
-        </project.reporting.outputEncoding>
-
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <apk.prefix>slidingMenu</apk.prefix>
-
-        <java.version>1.6</java.version>
-        <android.version>4.0.1.2</android.version>
-        <android.platform>14</android.platform>
-        <android-support.version>r7</android-support.version>
-
-        <android-maven.version>3.1.1</android-maven.version>
-        <actionbarsherlock.version>4.1.0</actionbarsherlock.version>
-        <roboguice.version>2.0</roboguice.version>
     </properties>
 
     <modules>
@@ -51,7 +40,7 @@
             <dependency>
                 <groupId>com.google.android</groupId>
                 <artifactId>android</artifactId>
-                <version>${android.version}</version>
+                <version>4.1.1.4</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -63,18 +52,24 @@
             <dependency>
                 <groupId>com.google.android</groupId>
                 <artifactId>support-v4</artifactId>
-                <version>${android-support.version}</version>
+                <version>r11</version>
             </dependency>
             <dependency>
                 <groupId>org.roboguice</groupId>
                 <artifactId>roboguice</artifactId>
-                <version>${roboguice.version}</version>
+                <version>2.0</version>
             </dependency>
             <dependency>
                 <groupId>com.actionbarsherlock</groupId>
-                <artifactId>library</artifactId>
-                <version>${actionbarsherlock.version}</version>
+                <artifactId>actionbarsherlock</artifactId>
+                <version>4.2.0</version>
                 <type>apklib</type>
+            </dependency>
+            <dependency>
+                <groupId>com.slidingmenu</groupId>
+                <artifactId>library-sherlock-support</artifactId>
+                <type>apklib</type>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -87,8 +82,8 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>2.3.2</version>
                     <configuration>
-                        <source>${java.version}</source>
-                        <target>${java.version}</target>
+                        <source>1.6</source>
+                        <target>1.6</target>
                     </configuration>
                 </plugin>
 
@@ -102,11 +97,11 @@
                     <groupId>com.jayway.maven.plugins.android.generation2
                     </groupId>
                     <artifactId>android-maven-plugin</artifactId>
-                    <version>${android-maven.version}</version>
+                    <version>3.1.1</version>
                     <extensions>true</extensions>
                     <configuration>
                         <sdk>
-                            <platform>${android.platform}</platform>
+                            <platform>15</platform>
                         </sdk>
                         <sign>
                             <debug>false</debug>

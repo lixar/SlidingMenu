@@ -1,43 +1,23 @@
-#Project Specifics
+*.class
 
-
-#Android generated
+# Package Files #
+*.dex
+*.war
+*.ear
+*.apk
+bin/
 bin
+gen/
+release/
+release
 gen
-lint.xml
-/project.properties
+.metadata/
+.metadata
+*.project
 
 
-#Eclipse
-.project
-.classpath
-.settings
-.checkstyle
 
-
-#IntelliJ IDEA
-.idea
+.idea/
 *.iml
-*.ipr
-*.iws
-classes
-out/
-gen-external-apklibs
 
-
-#Maven
-target
-release.properties
-pom.xml.*
-
-
-#Ant
-build.xml
-local.properties
-proguard.cfg
-
-
-#Other
-.DS_Store 
-tmp
-*.orig
+classes/
