@@ -3,16 +3,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.slidingmenu</groupId>
-	<artifactId>library-sherlock-support</artifactId>
-	<name>Sliding menu library with ActionBarSherlock support</name>
+    <groupId>com.lixar.slidingmenu</groupId>
+	<artifactId>library</artifactId>
+	<name>SlidingMenu library</name>
 	<packaging>apklib</packaging>
-    <version>1.2</version>
+    <version>1.2.1-SNAPSHOT</version>
 
 	<parent>
-		<groupId>com.slidingmenu</groupId>
+		<groupId>com.lixar.slidingmenu</groupId>
 		<artifactId>parent</artifactId>
-		<version>1.2</version>
+        <version>1.2.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 

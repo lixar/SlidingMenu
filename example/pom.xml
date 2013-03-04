@@ -3,15 +3,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.slidingmenu</groupId>
-	<artifactId>sliding-menu-examples</artifactId>
-	<name>Sliding menu samples</name>
+	<groupId>com.lixar.slidingmenu</groupId>
+	<artifactId>examples</artifactId>
+	<name>SlidingMenu examples</name>
+    <version>1.2.1-SNAPSHOT</version>
 	<packaging>apk</packaging>
 
 	<parent>
-		<groupId>com.slidingmenu</groupId>
+		<groupId>com.lixar.slidingmenu</groupId>
 		<artifactId>parent</artifactId>
-		<version>1.2</version>
+		<version>1.2.1-SNAPSHOT</version>
 	</parent>
 	
 	<dependencies>
@@ -37,8 +38,8 @@
             <type>apklib</type>
         </dependency>
         <dependency>
-            <groupId>com.slidingmenu</groupId>
-            <artifactId>library-sherlock-support</artifactId>
+            <groupId>com.lixar.slidingmenu</groupId>
+            <artifactId>library</artifactId>
             <type>apklib</type>
         </dependency>
     </dependencies>

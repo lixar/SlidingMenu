@@ -4,36 +4,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.slidingmenu</groupId>
+    <parent>
+        <groupId>com.lixar.maven</groupId>
+        <artifactId>super-pom</artifactId>
+        <version>0.1</version>
+    </parent>
+
+    <groupId>com.lixar.slidingmenu</groupId>
     <artifactId>parent</artifactId>
-    <version>1.2</version>
-    <name>Sliding Menu</name>
+    <version>1.2.1-SNAPSHOT</version>
+    <name>SlidingMenu parent</name>
     <packaging>pom</packaging>
-
-    <distributionManagement>
-        <repository>
-            <id>lixar-maven-repository</id>
-            <url>http://nexus.lixar.net/content/repositories/lixar-maven-repository/</url>
-        </repository>
-    </distributionManagement>
-
-    <repositories>
-        <repository>
-            <id>lixar-maven-repository</id>
-            <url>http://nexus.lixar.net/content/repositories/lixar-maven-repository/</url>
-        </repository>
-    </repositories>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <apk.prefix>slidingMenu</apk.prefix>
     </properties>
-
-    <modules>
-        <module>library</module>
-        <module>example</module>
-    </modules>
 
     <dependencyManagement>
         <dependencies>
@@ -66,8 +53,8 @@
                 <type>apklib</type>
             </dependency>
             <dependency>
-                <groupId>com.slidingmenu</groupId>
-                <artifactId>library-sherlock-support</artifactId>
+                <groupId>com.lixar.slidingmenu</groupId>
+                <artifactId>library</artifactId>
                 <type>apklib</type>
                 <version>${project.version}</version>
             </dependency>
@@ -121,4 +108,38 @@
             </plugins>
         </pluginManagement>
     </build>
+
+    <profiles>
+        <profile>
+            <id>default</id>
+            <activation>
+                <property>
+                    <name>performRelease</name>
+                    <value>!true</value>
+                </property>
+            </activation>
+            <modules>
+                <module>library</module>
+                <module>example</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>release</id>
+            <activation>
+                <property>
+                    <name>performRelease</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <modules>
+                <module>library</module>
+            </modules>
+        </profile>
+    </profiles>
+
+    <scm>
+        <url>git@github.com:lixar/SlidingMenu.git</url>
+        <connection>scm:git:git://github.com/lixar/SlidingMenu.git</connection>
+        <developerConnection>scm:git:git@github.com:lixar/SlidingMenu.git</developerConnection>
+    </scm>
 </project>
