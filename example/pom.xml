@@ -6,13 +6,13 @@
 	<groupId>com.lixar.slidingmenu</groupId>
 	<artifactId>examples</artifactId>
 	<name>SlidingMenu examples</name>
-    <version>1.2.1-SNAPSHOT</version>
+    <version>1.2.1</version>
 	<packaging>apk</packaging>
 
 	<parent>
 		<groupId>com.lixar.slidingmenu</groupId>
 		<artifactId>parent</artifactId>
-		<version>1.2.1-SNAPSHOT</version>
+		<version>1.2.1</version>
 	</parent>
 	
 	<dependencies>

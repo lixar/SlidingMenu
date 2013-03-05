@@ -7,12 +7,12 @@
 	<artifactId>library</artifactId>
 	<name>SlidingMenu library</name>
 	<packaging>apklib</packaging>
-    <version>1.2.1-SNAPSHOT</version>
+    <version>1.2.1</version>
 
 	<parent>
 		<groupId>com.lixar.slidingmenu</groupId>
 		<artifactId>parent</artifactId>
-        <version>1.2.1-SNAPSHOT</version>
+        <version>1.2.1</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
