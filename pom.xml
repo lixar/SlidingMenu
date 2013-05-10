@@ -9,9 +9,9 @@
     </parent>
 
     <groupId>com.lixar.slidingmenu</groupId>
-    <artifactId>parent</artifactId>
+    <artifactId>root</artifactId>
     <version>1.2.3-SNAPSHOT</version>
-    <name>SlidingMenu parent</name>
+    <name>SlidingMenu - Root POM</name>
     <packaging>pom</packaging>
 
     <properties>
@@ -52,7 +52,7 @@
             </dependency>
             <dependency>
                 <groupId>com.lixar.slidingmenu</groupId>
-                <artifactId>library</artifactId>
+                <artifactId>slidingmenu</artifactId>
                 <type>apklib</type>
                 <version>${project.version}</version>
             </dependency>
