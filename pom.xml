@@ -10,7 +10,7 @@
 
     <groupId>com.lixar.slidingmenu</groupId>
     <artifactId>root</artifactId>
-    <version>1.2.3</version>
+    <version>1.2.4-SNAPSHOT</version>
     <name>SlidingMenu - Root POM</name>
     <packaging>pom</packaging>
 

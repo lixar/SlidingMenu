@@ -6,11 +6,11 @@
 	<parent>
 		<groupId>com.lixar.slidingmenu</groupId>
 		<artifactId>root</artifactId>
-        <version>1.2.3</version>
+        <version>1.2.4-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>slidingmenu</artifactId>
-	<version>1.2.3</version>
+	<version>1.2.4-SNAPSHOT</version>
 	<name>SlidingMenu - Library</name>
 	<packaging>apklib</packaging>
 
